@@ -1,0 +1,17 @@
+{
+    "name": "flavius/html-parser",
+    "description": "a simple html parser",
+    "type": "library",
+    "authors": [
+        {
+            "name": "FlaviusVespasianus",
+            "email": "antoninusheliogabalus@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": { "DtParser\\": "" }
+    }
+}

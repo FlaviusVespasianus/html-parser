@@ -1,15 +1,15 @@
 # html-parser
 A very simple php parser of html documents which returns the amount of tags used in the document.   
-The return data can be given as an array, a html-table or in a xml data format.
 
-To parse an html document all you need to do is to call a static method as following:  
+Currently there are two return data types: 
+* array
+* xml
+
+An example of parsing a string data
 ```php
-
-$html = '<div><strong>this is a string</strong></div>';  //string format
-$html = '../file.html';                                  //file
-$html = 'https://thepiratebay-proxylist.org/';           //link
-$src = new HtmlSource($html);                            //html source object
-
-$resultAr = Parcer::parse($src, 'xml');         //the second argument may be array, xml or html
+$parser = new Parser();
+$parser->parse($html);  //$html may be a string, an url or a html document 
+$parser->returnArray(); //to get found tags
+$parser->returnXml(); //to get found tags as XML document
 
 ```
