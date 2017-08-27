@@ -8,9 +8,9 @@ Currently there are two return data types:
 An example of parsing a given source
 ```php
 $parser = new Parser();
-$parser->parse($source);  //$html may be a string, an url or a html document 
-$parser->returnArray(); //to get found tags
-$parser->returnXml(); //to get found tags as XML document
+$parser->parse($source);        //$html may be a string, an url or a html document 
+$parser->getTagsAsArray();      //to get found tags
+$parser->getTagsAsXml();        //to get found tags as XML document
 ```
 
 This source may be one of the following types:

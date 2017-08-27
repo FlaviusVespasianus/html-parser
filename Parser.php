@@ -12,12 +12,12 @@ class Parser
         $this->tags = $this->findTags($source->getSource());
     }
 
-    public function getTagsAsArrayArray(array $options = []): array
+    public function getTagsAsArray(array $options = []): array
     {
         return $this->tags;
     }
 
-    public function getTagsAsArrayXml(array $options = []): string
+    public function getTagsAsXml(array $options = []): string
     {
         return FormatConverter::convertToXml($this->tags, $options);
     }
@@ -28,4 +28,5 @@ class Parser
 
         return array_count_values($matches[1]);
     }
+
 }
