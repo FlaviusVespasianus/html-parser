@@ -11,7 +11,7 @@ class HtmlSource
     public function __construct($source)
     {
         if (is_file($source) || filter_var($source, FILTER_VALIDATE_URL)) {
-            $source = file_get_contents($source);
+            $this->source = file_get_contents($source);
         } elseif (is_string($source)) {
             $this->source = trim(preg_replace('/\s+/', ' ', $source));
         } else {
